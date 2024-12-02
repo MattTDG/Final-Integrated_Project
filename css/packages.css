@@ -1,0 +1,136 @@
+body {
+    color: #626262;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-con {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    max-width: 412px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, textarea {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav label img {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+#main-nav input, #burger-con {
+    display: none; 
+}
+
+#main-nav input:checked ~ #burger-con {
+    display: block; 
+}
+
+#main-nav input:checked ~ label img {
+    transform: rotate(90deg);
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-nav ul li a {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #626262;
+}
+
+#main-nav ul li {
+    border-bottom: 1px solid #efefef;
+}
+
+#main-nav ul li:first-child {
+    border-top: 1px solid #efefef;
+}
+
+.service-section img {
+    width: 100%;
+    height: auto; 
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 10px; 
+}
+
+p {
+    font-size: 14px; 
+}
+
+.line-separator {
+    margin-top: 20px;
+    border-top: solid 3px #CF6666;
+    padding-top: 20px;
+}
+
+#footer-hero {
+   background-color: #333; 
+   color: #fff; 
+   padding-bottom: 80px; 
+   font-size: 12px; 
+   margin-top :40px; 
+   text-align:center; 
+}
+
+#footer-contact-info h3 {
+   font-size :23px; 
+   margin-top :30px; 
+   margin-bottom :16px; 
+}
+
+
+@media (max-width :768px) { 
+
+     .grid-con { 
+         grid-template-columns :1fr ; 
+         gap :10px ; 
+     }
+
+     .menu-list { 
+         flex-direction :column ; 
+         align-items :flex-start ; 
+         gap :10px ; 
+         position:absolute ; 
+         background-color:#f8f8f8 ; 
+         width:auto ; 
+         z-index :1000; 
+         box-shadow :0px 4px 8px rgba(0,0,0,0.1); 
+         border-radius :5px; 
+     }
+
+     #hamburger:not(:checked) ~ .menu-list { 
+         display:flex ;
+     }
+
+     .content-section , #footer-hero { 
+        padding :10px ;
+        margin-bottom :10px ;
+     }
+}
