@@ -91,20 +91,33 @@ p {
 }
 
 #footer-hero {
-   background-color: #333; 
-   color: #fff; 
-   padding-bottom: 80px; 
-   font-size: 12px; 
-   margin-top :40px; 
-   text-align:center; 
-}
-
-#footer-contact-info h3 {
-   font-size :23px; 
-   margin-top :30px; 
-   margin-bottom :16px; 
-}
-
+    background-image: url(../images/footer.jpg);
+     background-repeat: no-repeat;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 40px;
+    padding-bottom: 80px;
+ }
+ 
+ #footer-hero h3 {
+    margin-top: 30px;
+    font-size: 28px;
+    margin-bottom: 16px;
+ }
+ 
+ #footer-privacy .line-seperator {
+    margin-top: 0px;
+ }
+ 
+ #footer-contact-info h3 {
+    font-size: 23px;
+ }
+ 
+ #footer-contact-info p {
+    margin-bottom: 20px;
+    line-height: 18px;
+    font-size: 11px;
+ }
 
 @media (max-width :768px) { 
 
