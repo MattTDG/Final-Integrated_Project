@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-con {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 412px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#main-header {
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#hamburger {
+    display: none; 
+}
+
+.hamburger-label {
+    display: block;
+    cursor: pointer;
+}
+
+#burger-con {
+    display: none; 
+}
+
+#hamburger:checked + label + #burger-con {
+    display: block; 
+}
+
+.content-section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.service-section img {
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 10px; 
+}
+
+p {
+    font-size: 14px; 
+}
+
+.line-separator {
+    margin-top: 20px;
+    border-top: solid 3px #CF6666;
+    padding-top: 20px;
+}
+
+#footer-hero {
+   background-color: #333; 
+   color: #fff; 
+   padding-bottom: 80px; 
+   font-size: 12px; 
+   margin-top :40px; 
+   text-align:center; 
+}
+
+#footer-contact-info h3 {
+   font-size :23px; 
+   margin-top :30px; 
+   margin-bottom :16px; 
+}
+
+
+@media (max-width :768px) { 
+    
+     .grid-con { 
+         grid-template-columns :1fr ; 
+         gap :10px ; 
+     }
+
+     .menu-list { 
+         flex-direction :column ; 
+         align-items :flex-start ; 
+         gap :10px ; 
+         display:none ; 
+         position:absolute ; 
+         background-color:#f8f8f8 ; 
+         width:auto ; 
+     }
+
+     #hamburger:not(:checked) ~ .menu-list { 
+         display:flex ; 
+     }
+
+     .content-section , #footer-hero { 
+        padding :10px ;
+        margin-bottom :10px ; 
+     }
+}
